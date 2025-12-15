@@ -2,9 +2,13 @@
 --Business Problems
 
 --Q.1 Find different payment method and number of transactions, number of qty sold
-select payment_method,count(*) as Transactions, sum(quantity) as Total_Quantity
-from walmart
-group by payment_method ;
+SELECT
+    payment_method,
+    COUNT(*) AS transactions,
+    SUM(quantity) AS total_quantity
+FROM walmart
+GROUP BY payment_method;
+
 
 --2. Identify the highest-rated category in each branch, displaying the branch, category,AVG RATING
 
